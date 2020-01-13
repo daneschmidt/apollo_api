@@ -77,3 +77,5 @@ CREATE TABLE "lunar_info"
   "image_gallery" varchar
   "lunar_activities" varchar
 };
+
+-- /// END DATABASE SETUP ///
