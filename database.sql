@@ -10,7 +10,14 @@ CREATE TABLE "user" (
 );
 
 
+-- /// SQL QUERY SETUP FOR DATA RETURN ///
 
+SELECT * FROM "mission"
+JOIN "launch_info" ON "mission"."launch_id" = "launch_info"."launch_id"
+JOIN "landing_info" ON "mission"."landing_id" = "landing_info"."landing_id"
+JOIN "crew" ON "mission"."crew_id" = "crew"."crew_id"
+JOIN "orbital_info" ON "mission"."orbit_id" = "orbital_info"."orbit_id"
+JOIN "lunar_info" ON "mission"."lunar_id" = "lunar_info"."lunar_id"
 
 -- /// DATA SETUP FOR API DATABASE ///
 
@@ -32,7 +39,7 @@ CREATE TABLE "mission"
 CREATE TABLE "crew" 
  (
   "id" SERIAL PRIMARY KEY,
-  "mission__id" int,
+  "crew_id" int,
 	"commander" varchar,
   "command_module_pilot" varchar,
   "lunar_module_pilot" varchar,
@@ -45,7 +52,7 @@ CREATE TABLE "crew"
 CREATE TABLE "launch_info" 
 (
   "id" SERIAL PRIMARY KEY,
-  "mission__id" int,
+  "launch_id" int,
   "launch_date" DATE,
   "location" varchar,
   "payload" varchar
@@ -54,7 +61,7 @@ CREATE TABLE "launch_info"
 CREATE TABLE "landing_info" 
 (
   "id" SERIAL PRIMARY KEY,
-  "mission__id" int,
+  "landing_id" int,
 	"landing_date" date,
   "landing_location" varchar,
   "recovery_ship" varchar
@@ -63,7 +70,7 @@ CREATE TABLE "landing_info"
 CREATE TABLE "orbital_info" 
 (
   "id" SERIAL PRIMARY KEY,
-  "mission__id" int,
+  "orbit_id" int,
   "altitude" varchar,
   "inclination" varchar,
   "number_of_orbits" varchar,
@@ -74,7 +81,7 @@ CREATE TABLE "orbital_info"
 CREATE TABLE "lunar_info" 
 (
   "id" SERIAL PRIMARY KEY,
-  "mission_id" int,
+  "lunar_id" int,
   "landed" boolean,
   "lunar_location" varchar,
   "lunar_coordinates" varchar,
