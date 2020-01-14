@@ -14,6 +14,7 @@ const missionRouter = require('../server/routes/mission.router');
 const launchRouter = require('../server/routes/launch.router');
 const crewRouter = require('../server/routes/crew.router');
 const orbitRouter = require('../server/routes/orbit.router');
+const lunarRouter = require('../server/routes/lunar.router');
 
 // Body parser middleware
 app.use(bodyParser.json());
@@ -32,6 +33,7 @@ app.use('/api/mission', missionRouter);
 app.use('/api/launch_info', launchRouter);
 app.use('/api/crew_info', crewRouter);
 app.use('/api/orbit_info', orbitRouter);
+app.use('/api/lunar_info', lunarRouter);
 
 // Serve static files
 app.use(express.static('build'));
