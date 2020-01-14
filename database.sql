@@ -18,6 +18,7 @@ JOIN "landing_info" ON "mission"."landing_id" = "landing_info"."landing_id"
 JOIN "crew" ON "mission"."crew_id" = "crew"."crew_id"
 JOIN "orbital_info" ON "mission"."orbit_id" = "orbital_info"."orbit_id"
 JOIN "lunar_info" ON "mission"."lunar_id" = "lunar_info"."lunar_id"
+ORDER BY "mission_name" DESC;
 
 -- /// DATA SETUP FOR API DATABASE ///
 
