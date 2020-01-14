@@ -11,6 +11,7 @@ CREATE TABLE "user" (
 
 
 
+
 -- /// DATA SETUP FOR API DATABASE ///
 
 CREATE TABLE "mission" 
