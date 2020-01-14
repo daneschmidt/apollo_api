@@ -32,6 +32,7 @@ CREATE TABLE "mission"
 CREATE TABLE "crew" 
  (
   "id" SERIAL PRIMARY KEY,
+  "mission__id" int,
 	"commander" varchar,
   "command_module_pilot" varchar,
   "lunar_module_pilot" varchar,
@@ -44,6 +45,7 @@ CREATE TABLE "crew"
 CREATE TABLE "launch_info" 
 (
   "id" SERIAL PRIMARY KEY,
+  "mission__id" int,
   "launch_date" DATE,
   "location" varchar,
   "payload" varchar
@@ -52,6 +54,7 @@ CREATE TABLE "launch_info"
 CREATE TABLE "landing_info" 
 (
   "id" SERIAL PRIMARY KEY,
+  "mission__id" int,
 	"landing_date" date,
   "landing_location" varchar,
   "recovery_ship" varchar
@@ -60,6 +63,7 @@ CREATE TABLE "landing_info"
 CREATE TABLE "orbital_info" 
 (
   "id" SERIAL PRIMARY KEY,
+  "mission__id" int,
   "altitude" varchar,
   "inclination" varchar,
   "number_of_orbits" varchar,
@@ -70,6 +74,7 @@ CREATE TABLE "orbital_info"
 CREATE TABLE "lunar_info" 
 (
   "id" SERIAL PRIMARY KEY,
+  "mission_id" int,
   "landed" boolean,
   "lunar_location" varchar,
   "lunar_coordinates" varchar,
