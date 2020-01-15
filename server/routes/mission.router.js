@@ -21,7 +21,7 @@ router.get('/', (req, res) => {
             res.send(results.rows);
         })
         .catch(error => {
-            console.log(`couldn't get movie`, error);
+            console.log(`couldn't get mission info`, error);
             res.sendStatus(500);
         })
 
@@ -31,7 +31,5 @@ router.get('/', (req, res) => {
  * POST route template
  */
 router.post('/', (req, res) => {
-
 });
-
 module.exports = router;
