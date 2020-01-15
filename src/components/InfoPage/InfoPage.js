@@ -20,17 +20,24 @@ class InfoPage extends Component {
     const missionArray = this.props.store.missionReducer.map((item, index) => {
       return (
         <div>
-       {item.mission_name}
-       {item.mission_overview}
-       <img src={item.mission_patch} width="100" height="100"></img>
-      
-
-      
-          
+          <img src={item.mission_patch} width="100" height="100"></img>
+          Mission Name: {item.mission_name}<br></br>
+          {item.mission_overview}<br></br>
+          <br></br>
+          Commander: {item.commander}<br></br>
+          Lunar Module Pilot: {item.lunar_module_pilot}<br></br>
+          Command Module Pilot: {item.command_module_pilot}<br></br>
+          <br></br>
+          Backup Commander: {item.backup_commander}<br></br>
+          Backup Lunar Module Pilot: {item.backup_lunar_module_pilot}<br></br>
+          Backup Command Module Pilot: {item.backup_command_module_pilot}<br></br>
+          <br></br>
+          <br></br>
         </div>
-       
-    )
-  
+
+
+      )
+
     })
 
     return (
