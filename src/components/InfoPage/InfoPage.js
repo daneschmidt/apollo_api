@@ -15,7 +15,7 @@ class InfoPage extends Component {
       type: 'FETCH_MISSION',
     });
   }
-  
+
   render() {
     return (
       <div>
@@ -23,18 +23,8 @@ class InfoPage extends Component {
         <p>{JSON.stringify(this.props.store.missionReducer)}</p>
       </div>
     )
-  
   }
 }
-
-// const InfoPage = () => (
-//   <div>
-//     <p>
-//       BLOW ME AWAY AFTER
-//     </p>
-//   </div>
-// );
-
 
 export default connect(mapStoreToProps)(InfoPage);
 
