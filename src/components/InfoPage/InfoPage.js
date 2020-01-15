@@ -22,7 +22,7 @@ class InfoPage extends Component {
         <div>
        {item.mission_name}
        {item.mission_overview}
-       <img src={item.crew_image}></img>
+       <img src={item.mission_patch} width="100" height="100"></img>
       
 
       
