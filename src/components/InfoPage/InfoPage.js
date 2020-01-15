@@ -19,7 +19,8 @@ class InfoPage extends Component {
   render() {
     return (
       <div>
-        <p>{JSON.stringify(this.props.reduxState)}</p>
+        <h2>MISSION INFO</h2>
+        <p>{JSON.stringify(this.props.store.missionReducer)}</p>
       </div>
     )
   
