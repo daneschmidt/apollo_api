@@ -17,14 +17,51 @@ class InfoPage extends Component {
   }
 
   render() {
+    const missionArray = this.props.store.missionReducer.map((item, index) => {
+      return (
+        <div>
+       {item.mission_name}
+       {item.mission_overview}
+       <img src={item.crew_image}></img>
+      
+
+      
+          
+        </div>
+       
+    )
+  
+    })
+
     return (
       <div>
         <h2>MISSION INFO</h2>
-        <p>{JSON.stringify(this.props.store.missionReducer)}</p>
+        {/* <p>{JSON.stringify(this.props.store.missionReducer)}</p> */}
+        <p>{missionArray}</p>
       </div>
     )
   }
 }
+
+
+// class InfoPage extends Component {
+
+//   componentDidMount() {
+
+//     this.props.dispatch({
+//       type: 'FETCH_MISSION',
+//     });
+//   }
+
+//   render() {
+//     return (
+//       <div>
+//         <h2>MISSION INFO</h2>
+//         <p>{JSON.stringify(this.props.store.missionReducer)}</p>
+//       </div>
+//     )
+//   }
+// }
 
 export default connect(mapStoreToProps)(InfoPage);
 
