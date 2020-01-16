@@ -14,7 +14,7 @@ router.get('/', (req, res) => {
     JOIN "crew" ON "mission"."crew_id" = "crew"."crew_id"
     JOIN "orbital_info" ON "mission"."orbit_id" = "orbital_info"."orbit_id"
     JOIN "lunar_info" ON "mission"."lunar_id" = "lunar_info"."lunar_id"
-    ORDER BY "mission_name" DESC;`;
+    ORDER BY "mission_name" ASC;`;
 
     pool.query(queryText)
         .then(results => {

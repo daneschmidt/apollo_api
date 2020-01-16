@@ -6,9 +6,9 @@ const router = express.Router();
  * GET route template
  */
 router.get('/', (req, res) => {
-    
+
     let queryText =
-    `SELECT "crew_image" FROM "crew"
+        `SELECT "crew_image" FROM "crew"
     ORDER BY "crew_id" DESC;`;
 
     pool.query(queryText)
@@ -19,14 +19,7 @@ router.get('/', (req, res) => {
             console.log(`couldn't get movie`, error);
             res.sendStatus(500);
         })
-
 });
 
-/**
- * POST route template
- */
-router.post('/', (req, res) => {
-
-});
 
 module.exports = router;
