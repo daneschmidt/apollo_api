@@ -38,6 +38,13 @@ class InfoPage extends Component {
           Mission Duration: {item.mission_duration}<br></br>
           Distance Traveled: {item.distance_traveled}<br></br>
           <br></br>
+          Launch Info:<br></br>
+          Launch Date: {item.launch_date}<br></br>
+          Location: {item.location}<br></br>
+          Payload: {item.payload}<br></br>
+          <br></br>
+          <br></br>
+         
         </div>
 
 
