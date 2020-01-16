@@ -32,17 +32,24 @@ class InfoPage extends Component {
           Backup Lunar Module Pilot: {item.backup_lunar_module_pilot}<br></br>
           Backup Command Module Pilot: {item.backup_command_module_pilot}<br></br>
           <br></br>
+          Launch Info:<br></br>
+          Launch Date: {item.launch_date}<br></br>
+          Launch Location: {item.location}<br></br>
+          Payload: {item.payload}<br></br>
+          <br></br>
           Altitude: {item.altitude}<br></br>
           Inclination: {item.inclination}<br></br>
           Number of Orbits: {item.number_of_orbits}<br></br>
           Mission Duration: {item.mission_duration}<br></br>
           Distance Traveled: {item.distance_traveled}<br></br>
           <br></br>
-          Launch Info:<br></br>
-          Launch Date: {item.launch_date}<br></br>
-          Location: {item.location}<br></br>
-          Payload: {item.payload}<br></br>
+          Lunar Location: {item.lunar_location}<br></br>
+          Lunar Coordinates: {item.lunar_coordinates}<br></br>
+          Time on Surface: {item.time_on_lunar_surface}<br></br>
           <br></br>
+          Landing Date: {item.landing_date}<br></br>
+          Landing Location: {item.landing_location}<br></br>
+          Recovery Ship: {item.recovery_ship}<br></br>
           <br></br>
          
         </div>
