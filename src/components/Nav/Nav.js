@@ -8,7 +8,7 @@ import mapStoreToProps from '../../redux/mapStoreToProps';
 const Nav = (props) => (
   <div className="nav">
     <Link to="/home">
-      <h2 className="nav-title">APOLLO API</h2>
+      <h4 className="nav-title">APOLLO API by Dane Schmidt</h4>
     </Link>
     <div className="nav-right">
       <Link className="nav-link" to="/home">
