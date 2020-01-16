@@ -9,7 +9,11 @@ const AboutPage = () => (
   <div>
     <div>
       <p>
-        This about page is for anyone to read!
+        The NASA API was created by Dane Schmidt as a two week sprint project at Prime Digital Academy in Jan 2020
+        The API will be updated as time permits with additional NASA mission info as well as other agencies and countries space missions
+        Please feel free to contact me at daneschmidt@gmail.com if you have any questions, concerns or requests.
+
+        ALL IMAGES ARE MEDIA PROPERTY OF NASA. 
       </p>
     </div>
   </div>
