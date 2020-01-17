@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import mapStoreToProps from '../../redux/mapStoreToProps';
 
+import '../InfoPage/InfoPage.css';
+
 class InfoPage extends Component {
 
   componentDidMount() {
@@ -18,9 +20,9 @@ class InfoPage extends Component {
           <img src={item.mission_patch} width="100" height="100"></img>
           <h3>Mission Name:</h3> {item.mission_name}<br></br>
           <h3>Mission Objectives:</h3>
-          {item.mission_objectives}<br></br>
+          <span>{item.mission_objectives}</span><br></br>
           <h3>Mission Highlights:</h3>
-          {item.mission_highlights}<br></br>
+          <span>{item.mission_highlights}</span><br></br>
           <br></br>
           <h3>Crew</h3>
           Commander: {item.commander}<br></br>
