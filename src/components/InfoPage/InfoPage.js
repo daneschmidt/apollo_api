@@ -17,7 +17,10 @@ class InfoPage extends Component {
         <div>
           <img src={item.mission_patch} width="100" height="100"></img>
           <h3>Mission Name:</h3> {item.mission_name}<br></br>
-          {item.mission_overview}<br></br>
+          <h3>Mission Objectives:</h3>
+          {item.mission_objectives}<br></br>
+          <h3>Mission Highlights:</h3>
+          {item.mission_highlights}<br></br>
           <br></br>
           <h3>Crew</h3>
           Commander: {item.commander}<br></br>
