@@ -16,7 +16,7 @@ router.get('/', (req, res) => {
             res.send(results.rows);
         })
         .catch(error => {
-            console.log(`couldn't get movie`, error);
+            console.log(`couldn't get data`, error);
             res.sendStatus(500);
         })
 });

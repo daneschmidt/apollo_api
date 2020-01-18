@@ -8,12 +8,15 @@ class InfoPage extends Component {
 
   componentDidMount() {
 
+    console.log(req.params);
+
     this.props.dispatch({
       type: 'FETCH_MISSION',
     });
   }
 
   render() {
+   
     const missionArray = this.props.store.missionReducer.map((item, index) => {
       return (
         <div>
