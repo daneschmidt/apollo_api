@@ -18,6 +18,7 @@ const lunarRouter = require('../server/routes/lunar.router');
 const crewPicRouter = require('../server/routes/crewPic.router');
 const missionPatchRouter = require('../server/routes/missionPatch.router');
 const highlightsRouter = require('../server/routes/highlights.router');
+const specMissionRouter = require('../server/routes/specMission.router');
 
 
 // Body parser middleware
@@ -41,6 +42,7 @@ app.use('/api/lunar_info', lunarRouter);
 app.use('/api/crew_pic', crewPicRouter);
 app.use('/api/mission_patch', missionPatchRouter);
 app.use('/api/mission_highlights', highlightsRouter);
+app.use('/api/mission/:launchId', specMissionRouter);
 
 // Serve static files
 app.use(express.static('build'));

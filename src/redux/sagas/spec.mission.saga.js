@@ -2,16 +2,16 @@ import axios from 'axios';
 import { put, takeLatest } from 'redux-saga/effects';
 
 
-function* getMissions() {
- 
+function* getSpecMission() {
+
     try {
         const response = yield axios({
             method: 'GET',
-            url: '/api/mission'
+            url: '/api/mission/:launchId'
         });
        
         yield put({
-            type: 'SET_MISSION',
+            type: 'SET_SPEC_MISSION',
             payload: response.data
         });
 
@@ -21,9 +21,9 @@ function* getMissions() {
 
 }
 
-function* missionSaga() {
-    yield takeLatest('FETCH_MISSION', getMissions);
+function* specMissionSaga() {
+    yield takeLatest('FETCH_MISSION', getSpecMission);
   }
 
 
-export default missionSaga;
+export default specMissionSaga;
