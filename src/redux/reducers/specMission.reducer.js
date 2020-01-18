@@ -1,4 +1,4 @@
-const specMissionReducer = (state = 0, action) => {
+const specMissionReducer = (state = [], action) => {
 
     switch (action.type) {
         case 'SET_SPEC_MISSION':

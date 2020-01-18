@@ -4,16 +4,15 @@ const router = express.Router();
 
 router.get('/api/mission/:data', (req, res) => {
 
-    let flightDetails = req.params.data;
+    let details = req.params.data;
 
     let queryText =
-    `SELECT * FROM "mission"
-    JOIN "launch_info" ON "mission"."launch_id" = "launch_info"."launch_id"
-    WHERE "mission".id = ${flightDetails};`;
+    `SELECT "mission_patch" FROM "mission"
+    ORDER BY "crew_id" DESC;`;
 
     pool.query(queryText)
-        .then(response => {
-            res.send(response.rows);
+        .then(results => {
+            res.send(results.rows);
         })
         .catch(error => {
             console.log(`couldn't get data`, error);

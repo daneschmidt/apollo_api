@@ -7,7 +7,6 @@ function* getSpecMission() {
     try {
         const response = yield axios({
             method: 'GET',
-            // url: '/api/mission/flightDetails',
             url: '/api/mission/',
         });
 
