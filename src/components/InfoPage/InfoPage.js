@@ -8,8 +8,6 @@ class InfoPage extends Component {
 
   componentDidMount() {
 
-    console.log(req.params);
-
     this.props.dispatch({
       type: 'FETCH_MISSION',
     });
@@ -20,7 +18,7 @@ class InfoPage extends Component {
     const missionArray = this.props.store.missionReducer.map((item, index) => {
       return (
         <div>
-          <img src={item.mission_patch} width="200"></img>
+          <img src={item.mission_patch} alt="mission patch" width="200"></img>
 
           <div>
           <h3>Mission Name:</h3> {item.mission_name}<br></br>

@@ -42,7 +42,7 @@ app.use('/api/lunar_info', lunarRouter);
 app.use('/api/crew_pic', crewPicRouter);
 app.use('/api/mission_patch', missionPatchRouter);
 app.use('/api/mission_highlights', highlightsRouter);
-app.use('/api/mission/:launchId', specMissionRouter);
+app.use('/api/mission/:id', specMissionRouter);
 
 // Serve static files
 app.use(express.static('build'));
