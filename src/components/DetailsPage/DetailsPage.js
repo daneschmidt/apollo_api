@@ -43,27 +43,34 @@ class DetailsPage extends Component {
           </pre></div>
           <br></br>
           <h3>Launch</h3>
-          Launch Info:<br></br>
+          <pre>
           Launch Date: {item.launch_date}<br></br>
           Launch Location: {item.location}<br></br>
           Payload: {item.payload}<br></br>
+          </pre>
           <br></br>
           <h3>Orbit</h3>
+          <pre>
           Altitude: {item.altitude}<br></br>
           Inclination: {item.inclination}<br></br>
           Number of Orbits: {item.number_of_orbits}<br></br>
           Mission Duration: {item.mission_duration}<br></br>
           Distance Traveled: {item.distance_traveled}<br></br>
+          </pre>
           <br></br>
           <h3>Lunar</h3>
+          <pre>
           Lunar Location: {item.lunar_location}<br></br>
           Lunar Coordinates: {item.lunar_coordinates}<br></br>
           Time on Surface: {item.time_on_lunar_surface}<br></br>
+          </pre>
           <br></br>
           <h3>Landing</h3>
+          <pre>
           Landing Date: {item.landing_date}<br></br>
           Landing Location: {item.landing_location}<br></br>
           Recovery Ship: {item.recovery_ship}<br></br>
+          </pre>
           <br></br>
         </div>
             )
