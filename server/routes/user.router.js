@@ -21,7 +21,11 @@ router.get('/', rejectUnauthenticated, (req, res) => {
 router.post('/register', (req, res, next) => {  
   const username = req.body.username;
   const password = encryptLib.encryptPassword(req.body.password);
-  // const apiKey = uuidAPIKey.create;
+
+
+  // const apiKey = $ apiKeyTool.js -g
+
+  
 
   const queryText = 'INSERT INTO "user" (username, password) VALUES ($1, $2) RETURNING id';
   pool.query(queryText, [username, password])

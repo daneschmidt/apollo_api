@@ -7,11 +7,11 @@ function* getSpecMission() {
     try {
         const response = yield axios({
             method: 'GET',
-            url: '/api/mission/',
+            url: '/api/data/'
         });
 
         yield put({
-            type: 'SET_SPEC_MISSION',
+            type: 'SET_DATA',
             payload: response.data
         });
 
@@ -22,7 +22,7 @@ function* getSpecMission() {
 }
 
 function* specMissionSaga() {
-    yield takeLatest('FETCH_DETAILS', getSpecMission);
+    yield takeLatest('FETCH_DATA', getSpecMission);
 }
 
 

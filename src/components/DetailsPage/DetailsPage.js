@@ -9,7 +9,7 @@ class DetailsPage extends Component {
     componentDidMount() {
 
         this.props.dispatch({
-            type: 'FETCH_DETAILS',
+            type: 'FETCH_DATA',
         });
     }
 
@@ -26,7 +26,7 @@ class DetailsPage extends Component {
         return (
             <div>
                 <h2>TEST INFO</h2>
-                {detailsArray}
+                <div>{detailsArray}</div>
             </div>
 
         )
