@@ -2,15 +2,18 @@ const express = require('express');
 const pool = require('../modules/pool');
 const router = express.Router();
 
-router.get('/api/mission/:data', (req, res) => {
+router.get('/api/mission/:id', (req, res) => {
 
-    let details = req.params.data;
+    let id = req.params.id;
+
+    // let queryText =
+    // `SELECT "mission_patch" FROM "mission"
+    // WHERE "id" = $1;`;
 
     let queryText =
-    `SELECT "mission_patch" FROM "mission"
-    ORDER BY "crew_id" DESC;`;
+    `SELECT * FROM "mission";`;
 
-    pool.query(queryText)
+    pool.query(queryText, )
         .then(results => {
             res.send(results.rows);
         })
@@ -18,6 +21,15 @@ router.get('/api/mission/:data', (req, res) => {
             console.log(`couldn't get data`, error);
             res.sendStatus(500);
         })
+
+    // pool.query(queryText, [id])
+    //     .then(results => {
+    //         res.send(results.rows);
+    //     })
+    //     .catch(error => {
+    //         console.log(`couldn't get data`, error);
+    //         res.sendStatus(500);
+    //     })
 
 });
 

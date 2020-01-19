@@ -17,7 +17,7 @@ class InfoPage extends Component {
    
     const missionArray = this.props.store.missionReducer.map((item, index) => {
       return (
-        <div>
+        <div key={index}>
           <img src={item.mission_patch} alt="mission patch" width="200"></img>
 
           <div>
@@ -73,7 +73,7 @@ class InfoPage extends Component {
       <div>
         <h2>MISSION INFO</h2>
         {/* <p>{JSON.stringify(this.props.store.missionReducer)}</p> */}
-        <p>{missionArray}</p>
+        <div>{missionArray}</div>
       </div>
     )
   }

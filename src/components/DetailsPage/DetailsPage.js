@@ -15,13 +15,21 @@ class DetailsPage extends Component {
 
     render() {
 
-            
+        const detailsArray = this.props.store.specMissionReducer.map((item, index) => {
             return (
-                <div>
-                
-                <p>{JSON.stringify(this.props.store.specMissionReducer)}</p>
+                <div key={index}>
+                    {item.mission_name}
                 </div>
             )
+        })
+
+        return (
+            <div>
+                <h2>TEST INFO</h2>
+                {detailsArray}
+            </div>
+
+        )
     }
 }
 

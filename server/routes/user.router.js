@@ -4,6 +4,9 @@ const encryptLib = require('../modules/encryption');
 const pool = require('../modules/pool');
 const userStrategy = require('../strategies/user.strategy');
 
+// const uuidAPIKey = require('uuid-apikey');
+
+
 const router = express.Router();
 
 // Handles Ajax request for user information if user is authenticated
@@ -18,8 +21,9 @@ router.get('/', rejectUnauthenticated, (req, res) => {
 router.post('/register', (req, res, next) => {  
   const username = req.body.username;
   const password = encryptLib.encryptPassword(req.body.password);
+  // const apiKey = uuidAPIKey.create;
 
-  const queryText = 'INSERT INTO "user" (username, password) VALUES ($1, $2) RETURNING id';
+  const queryText = 'INSERT INTO "user" (username, password,) VALUES ($1, $2) RETURNING id';
   pool.query(queryText, [username, password])
     .then(() => res.sendStatus(201))
     .catch(() => res.sendStatus(500));
