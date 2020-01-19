@@ -1,8 +1,26 @@
 
+body {background-color: rgb(255, 255, 255);}
+
+
 pre 
 {
   display: block;
   font-family: monospace;
   white-space: pre;
   margin: 2em 0;
+}
+
+
+h1 {
+  color: #3f443f;
+}
+
+h5 {
+  color: #3f443f;
+}
+
+.bigText {
+
+  color: #080f63;
+
 }

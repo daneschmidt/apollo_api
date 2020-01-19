@@ -18,9 +18,9 @@ class InfoPage extends Component {
     const missionArray = this.props.store.missionReducer.map((item, index) => {
       return (
         <div key={index}>
-          <img src={item.mission_patch} alt="mission patch" width="200"></img>
+          <img src={item.mission_patch} alt="mission patch" width="150"></img>
 
-          <div>
+          <div class="bigText">
           <h3>Mission Name:</h3> {item.mission_name}<br></br>
           <h5>Mission Objectives:</h5>
           <pre>

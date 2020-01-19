@@ -4,7 +4,7 @@ const encryptLib = require('../modules/encryption');
 const pool = require('../modules/pool');
 const userStrategy = require('../strategies/user.strategy');
 
-// const uuidAPIKey = require('uuid-apikey');
+const uuidAPIKey = require('uuid-apikey');
 
 
 const router = express.Router();
@@ -21,9 +21,9 @@ router.get('/', rejectUnauthenticated, (req, res) => {
 router.post('/register', (req, res, next) => {  
   const username = req.body.username;
   const password = encryptLib.encryptPassword(req.body.password);
+  console.log(uuidAPIKey.create());
 
 
-  // const apiKey = $ apiKeyTool.js -g
 
   
 
