@@ -12,6 +12,7 @@ const UserPage = (props) => (
       Welcome, { props.store.user.username }!
     </h1>
     <p>Your ID is: {props.store.user.id}</p>
+    <p>Your API KEY is: {props.store.user.api_key}</p>
     <LogOutButton className="log-in" />
   </div>
 );

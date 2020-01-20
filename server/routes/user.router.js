@@ -23,8 +23,7 @@ router.post('/register', (req, res, next) => {
   const password = encryptLib.encryptPassword(req.body.password);
 
   const apiKeyGen = uuidAPIKey.create();
-  const uuid = uuidAPIKey.uuid;
-  const api_key = uuidAPIKey.apiKey;
+ 
 
   console.log('its the fucking API KEY', apiKeyGen);
  
