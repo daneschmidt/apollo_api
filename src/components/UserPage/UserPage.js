@@ -9,7 +9,7 @@ import mapStoreToProps from '../../redux/mapStoreToProps';
 const UserPage = (props) => (
   <div>
     <h1 id="welcome">
-      Welcome, { props.store.user.username }!
+      Welcome, {props.store.user.username}!
     </h1>
     <p>Your ID is: {props.store.user.id}</p>
     <p>Your API KEY is: {props.store.user.api_key}</p>
