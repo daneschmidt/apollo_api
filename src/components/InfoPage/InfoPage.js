@@ -20,7 +20,7 @@ class InfoPage extends Component {
         <div key={index}>
           <img src={item.mission_patch} alt="mission patch" width="150"></img>
 
-          <div class="bigText">
+          <div className="bigText">
           <h3>Mission Name:</h3> {item.mission_name}<br></br>
           <h5>Mission Objectives:</h5>
           <pre>

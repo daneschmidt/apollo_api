@@ -51,6 +51,7 @@ app.use('/api/lunar_info', lunarRouter);
 app.use('/api/crew_pic', crewPicRouter);
 app.use('/api/mission_patch', missionPatchRouter);
 app.use('/api/mission_highlights', highlightsRouter);
+
 app.use('/api/data/', specMissionRouter);
 app.use('/api/crew/', specCrewRouter);
 app.use('/api/mission_highlights/', specHighlightsRouter);
