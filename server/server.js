@@ -22,6 +22,7 @@ const highlightsRouter = require('../server/routes/highlights.router');
 const specMissionRouter = require('../server/routes/specMission.router');
 const specCrewRouter = require('../server/routes/specCrew.router');
 const specHighlightsRouter = require('../server/routes/spechHighlights.router');
+const specLandingRouter = require('../server/routes/specLanding.router');
 
 
 // Body parser middleware
@@ -49,6 +50,7 @@ app.use('/api/mission_highlights', highlightsRouter);
 app.use('/api/data/', specMissionRouter);
 app.use('/api/crew/', specCrewRouter);
 app.use('/api/mission_highlights/', specHighlightsRouter);
+app.use('/api/landing_info/', specLandingRouter);
 
 // Serve static files
 app.use(express.static('build'));
