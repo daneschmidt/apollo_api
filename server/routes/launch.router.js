@@ -8,9 +8,8 @@ const router = express.Router();
 router.get('/', (req, res) => {
     
     let queryText =
-    `SELECT * FROM "mission"
-    JOIN "launch_info" ON "mission"."launch_id" = "launch_info"."launch_id"
-    ORDER BY "mission_name" DESC;`;
+    `SELECT * FROM "launch_info"
+    ORDER BY "launch_id" DESC;`;
 
     pool.query(queryText)
         .then(results => {
