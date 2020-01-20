@@ -21,14 +21,16 @@ router.get('/', rejectUnauthenticated, (req, res) => {
 router.post('/register', (req, res, next) => {  
   const username = req.body.username;
   const password = encryptLib.encryptPassword(req.body.password);
-  console.log(uuidAPIKey.create());
 
+  const apiKeyGen = uuidAPIKey.create();
+  const uuid = uuidAPIKey.uuid;
+  const api_key = uuidAPIKey.apiKey;
 
+  console.log('its the fucking API KEY', apiKeyGen);
+ 
 
-  
-
-  const queryText = 'INSERT INTO "user" (username, password) VALUES ($1, $2) RETURNING id';
-  pool.query(queryText, [username, password])
+  const queryText = 'INSERT INTO "user" (username, password, uuid, api_key) VALUES ($1, $2, $3, $4) RETURNING id';
+  pool.query(queryText, [username, password, apiKeyGen.uuid, apiKeyGen.apiKey])
     .then(() => res.sendStatus(201))
     .catch(() => res.sendStatus(500));
 });
