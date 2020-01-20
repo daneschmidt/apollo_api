@@ -6,11 +6,8 @@ const router = express.Router();
 router.get('/:id', (req, res) => {
     
     let queryText =
-    `SELECT * FROM "crew"
-    WHERE "crew"."crew_id" =$1;`;
-
-
-
+    `SELECT * FROM "orbital_info"
+    WHERE "orbit_id" =$1;`;
 
     pool.query(queryText, [req.params.id])
         .then(results => {
@@ -22,5 +19,6 @@ router.get('/:id', (req, res) => {
         })
 
 });
+
 
 module.exports = router;
