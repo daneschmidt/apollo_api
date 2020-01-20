@@ -25,6 +25,7 @@ ORDER BY "mission_name" DESC;
 CREATE TABLE "mission" 
  (
   "id" SERIAL PRIMARY KEY,
+  "misison_id" int,
   "mission_name" varchar,
   "crewed" boolean,
   "mission_patch" varchar,
