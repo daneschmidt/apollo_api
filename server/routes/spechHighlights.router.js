@@ -5,14 +5,12 @@ const router = express.Router();
 /**
  * GET route template
  */
+
 router.get('/:id', (req, res) => {
     
     let queryText =
-    `SELECT * FROM "crew"
-    WHERE "crew"."crew_id" =$1;`;
-
-
-
+    `SELECT "mission_name", "mission_highlights" FROM "mission"
+     WHERE "mission"."mission_id" =$1;`;
 
     pool.query(queryText, [req.params.id])
         .then(results => {
