@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import mapStoreToProps from '../../redux/mapStoreToProps';
 
+import '../LoginPage/LoginPage.css'
+
 class LoginPage extends Component {
   state = {
     username: '',
@@ -67,7 +69,7 @@ class LoginPage extends Component {
           </div>
           <div>
             <input
-              className="log-in"
+              className="log-in, btn"
               type="submit"
               name="submit"
               value="Log In"
@@ -77,7 +79,7 @@ class LoginPage extends Component {
         <center>
           <button
             type="button"
-            className="link-button"
+            className="link-button, btn"
             onClick={() => {this.props.dispatch({type: 'SET_TO_REGISTER_MODE'})}}
           >
             Register
