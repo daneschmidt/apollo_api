@@ -2,8 +2,7 @@ const express = require('express');
 const pool = require('../modules/pool');
 const router = express.Router();
 
-router.get('/', (req, res) => {
-
+router.get('/:id', (req, res) => {
     let queryText =
         `SELECT * FROM "mission"
         JOIN "launch_info" ON "mission"."launch_id" = "launch_info"."launch_id"
@@ -11,9 +10,9 @@ router.get('/', (req, res) => {
         JOIN "crew" ON "mission"."crew_id" = "crew"."crew_id"
         JOIN "orbital_info" ON "mission"."orbit_id" = "orbital_info"."orbit_id"
         JOIN "lunar_info" ON "mission"."lunar_id" = "lunar_info"."lunar_id"
-        WHERE "mission"."id" = 1;`;
+        WHERE "mission"."mission_id" = $1;`;
 
-    pool.query(queryText)
+    pool.query(queryText, [req.params.id])
         .then(results => {
             res.send(results.rows);
         })
