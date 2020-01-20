@@ -26,6 +26,7 @@ const specHighlightsRouter = require('./routes/specHighlights.router');
 const specLandingRouter = require('../server/routes/specLanding.router');
 const specOrbitRouter = require('../server/routes/specOrbit.router');
 const specLunarRouter = require('../server/routes/specLunar.router');
+const specLaunchRouter = require('../server/routes/specLaunch.router');
 
 
 // Body parser middleware
@@ -56,6 +57,7 @@ app.use('/api/mission_highlights/', specHighlightsRouter);
 app.use('/api/landing_info/', specLandingRouter);
 app.use('/api/orbit_info/', specOrbitRouter);
 app.use('/api/lunar_info/', specLunarRouter);
+app.use('/api/launch_info/', specLaunchRouter);
 
 // Serve static files
 app.use(express.static('build'));
