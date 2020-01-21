@@ -20,9 +20,9 @@ const crewPicRouter = require('../server/routes/crewPic.router');
 const missionPatchRouter = require('../server/routes/missionPatch.router');
 const highlightsRouter = require('../server/routes/highlights.router');
 
-const specMissionRouter = require('../server/routes/specMission.router.js');
-const specCrewRouter = require('../server/routes/specCrew.router');
-const specHighlightsRouter = require('../server/routes/specHighlights.router');
+
+// const specCrewRouter = require('../server/routes/specCrew.router');
+// const specHighlightsRouter = require('../server/routes/specHighlights.router');
 const specLandingRouter = require('../server/routes/specLanding.router');
 const specOrbitRouter = require('../server/routes/specOrbit.router');
 const specLunarRouter = require('../server/routes/specLunar.router');
@@ -52,9 +52,9 @@ app.use('/api/crew_pic', crewPicRouter);
 app.use('/api/mission_patch', missionPatchRouter);
 app.use('/api/mission_highlights', highlightsRouter);
 
-app.use('/api/data/', specMissionRouter);
-app.use('/api/crew/', specCrewRouter);
-app.use('/api/mission_highlights/', specHighlightsRouter);
+app.use('/api/data/', missionRouter);
+app.use('/api/crew/', crewRouter);
+app.use('/api/mission_highlights/', highlightsRouter);
 app.use('/api/landing_info/', specLandingRouter);
 app.use('/api/orbit_info/', specOrbitRouter);
 app.use('/api/lunar_info/', specLunarRouter);

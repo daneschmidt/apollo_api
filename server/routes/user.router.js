@@ -21,18 +21,27 @@ router.get('/', rejectUnauthenticated, (req, res) => {
 router.post('/register', (req, res, next) => {  
   const username = req.body.username;
   const password = encryptLib.encryptPassword(req.body.password);
-
   const apiKeyGen = uuidAPIKey.create();
  
-
-  console.log('its the fucking API KEY', apiKeyGen);
- 
-
   const queryText = 'INSERT INTO "user" (username, password, uuid, api_key) VALUES ($1, $2, $3, $4) RETURNING id';
+  const apiQueryText = 'SELECT * FROM "user" WHERE "api_key" IS NOT NULL';
+
+
   pool.query(queryText, [username, password, apiKeyGen.uuid, apiKeyGen.apiKey])
-    .then(() => res.sendStatus(201))
-    .catch(() => res.sendStatus(500));
+  .then(() => res.sendStatus(201))
+  .catch(() => res.sendStatus(500));
 });
+
+///// SCOTTS EXAMPLE CODE BELOW///////
+
+// pool.query(queryThatChecksForApiKey)
+//    .then((response) => {
+//       if(response.rows == 1){
+//          // now do your real pool.query
+//       }
+//    }
+// }
+////// END SCOTTS EXAMPLE CODE ////////
 
 // Handles login form authenticate/login POST
 // userStrategy.authenticate('local') is middleware that we run on this route

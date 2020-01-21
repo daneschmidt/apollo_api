@@ -2,13 +2,11 @@ const express = require('express');
 const pool = require('../modules/pool');
 const router = express.Router();
 
-/**
- * GET route template
- */
-router.get('/', (req, res) => {
-    
+
+router.get('/:apiKey', (req, res) => {
+
     let queryText =
-    `SELECT * FROM "mission"
+        `SELECT * FROM "mission"
     JOIN "launch_info" ON "mission"."launch_id" = "launch_info"."launch_id"
     JOIN "landing_info" ON "mission"."landing_id" = "landing_info"."landing_id"
     JOIN "crew" ON "mission"."crew_id" = "crew"."crew_id"
@@ -16,21 +14,63 @@ router.get('/', (req, res) => {
     JOIN "lunar_info" ON "mission"."lunar_id" = "lunar_info"."lunar_id"
     ORDER BY "mission_name" ASC;`;
 
-    pool.query(queryText)
-        .then(results => {
-            res.send(results.rows);
+    const apiKeyCheckQuery = `SELECT * FROM "user" WHERE "api_key"=$1`;
+
+    pool.query(apiKeyCheckQuery, [req.params.apiKey])
+        .then((response) => {
+            if (response.rows.length == 1) {
+                pool.query(queryText)
+                    .then(results => {
+                        res.send(results.rows);
+                    })
+                    .catch(error => {
+                        console.log(`couldn't get mission info`, error);
+                        res.sendStatus(500);
+                    });
+            } else {
+                res.sendStatus(401);
+            }
         })
-        .catch(error => {
-            console.log(`couldn't get mission info`, error);
+        .catch((err) => {
+            console.warn(err);
+            res.sendStatus(500);
+        })
+});
+
+router.get('/:id/:apiKey', (req, res) => {
+    let queryText =
+        `SELECT * FROM "mission"
+        JOIN "launch_info" ON "mission"."launch_id" = "launch_info"."launch_id"
+        JOIN "landing_info" ON "mission"."landing_id" = "landing_info"."landing_id"
+        JOIN "crew" ON "mission"."crew_id" = "crew"."crew_id"
+        JOIN "orbital_info" ON "mission"."orbit_id" = "orbital_info"."orbit_id"
+        JOIN "lunar_info" ON "mission"."lunar_id" = "lunar_info"."lunar_id"
+        WHERE "mission"."mission_id" = $1;`;
+
+    const apiKeyCheckQuery = `SELECT * FROM "user" WHERE "api_key"=$1`;
+
+    pool.query(apiKeyCheckQuery, [req.params.apiKey])
+        .then((response) => {
+            if (response.rows.length == 1) {
+                pool.query(queryText, [req.params.id])
+                    .then(results => {
+                        res.send(results.rows);
+                    })
+                    .catch(error => {
+                        console.log(`couldn't get mission info`, error);
+                        res.sendStatus(500);
+                    });
+            } else {
+                res.sendStatus(401);
+            }
+        })
+        .catch((err) => {
+            console.warn(err);
             res.sendStatus(500);
         })
 
 });
 
-/**
- * POST route template
- */
-// router.post('/', (req, res) => {
-// });
+
 
 module.exports = router;
