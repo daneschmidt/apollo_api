@@ -59,7 +59,6 @@ router.get('/:id/:apiKey', (req, res) => {
             console.warn(err);
             res.sendStatus(500);
         })
-
 });
 
 module.exports = router;
