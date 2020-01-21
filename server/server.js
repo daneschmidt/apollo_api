@@ -20,15 +20,6 @@ const crewPicRouter = require('../server/routes/crewPic.router');
 const missionPatchRouter = require('../server/routes/missionPatch.router');
 const highlightsRouter = require('../server/routes/highlights.router');
 
-
-// const specCrewRouter = require('../server/routes/specCrew.router');
-// const specHighlightsRouter = require('../server/routes/specHighlights.router');
-const specLandingRouter = require('../server/routes/specLanding.router');
-const specOrbitRouter = require('../server/routes/specOrbit.router');
-const specLunarRouter = require('../server/routes/specLunar.router');
-const specLaunchRouter = require('../server/routes/specLaunch.router');
-
-
 // Body parser middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -55,10 +46,10 @@ app.use('/api/mission_highlights', highlightsRouter);
 app.use('/api/data/', missionRouter);
 app.use('/api/crew/', crewRouter);
 app.use('/api/mission_highlights/', highlightsRouter);
-app.use('/api/landing_info/', specLandingRouter);
-app.use('/api/orbit_info/', specOrbitRouter);
-app.use('/api/lunar_info/', specLunarRouter);
-app.use('/api/launch_info/', specLaunchRouter);
+app.use('/api/landing_info/', landingRouter);
+app.use('/api/orbit_info/', orbitRouter);
+app.use('/api/lunar_info/', lunarRouter);
+app.use('/api/launch_info/', launchRouter);
 
 // Serve static files
 app.use(express.static('build'));
