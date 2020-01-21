@@ -20,9 +20,9 @@ const crewPicRouter = require('../server/routes/crewPic.router');
 const missionPatchRouter = require('../server/routes/missionPatch.router');
 const highlightsRouter = require('../server/routes/highlights.router');
 
-const specMissionRouter = require('../server/routes/specMission.router');
+const specMissionRouter = require('../server/routes/specMission.router.js');
 const specCrewRouter = require('../server/routes/specCrew.router');
-const specHighlightsRouter = require('./routes/specHighlights.router');
+const specHighlightsRouter = require('../server/routes/specHighlights.router');
 const specLandingRouter = require('../server/routes/specLanding.router');
 const specOrbitRouter = require('../server/routes/specOrbit.router');
 const specLunarRouter = require('../server/routes/specLunar.router');

@@ -16,7 +16,7 @@ function* getSpecMission() {
         });
 
     } catch (err) {
-        console.log('error fetching data', err);
+        console.log('error fetching data in the specMissionSaga', err);
     }
 
 }

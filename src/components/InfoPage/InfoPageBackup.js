@@ -4,23 +4,23 @@ import mapStoreToProps from '../../redux/mapStoreToProps';
 
 import '../InfoPage/InfoPage.css';
 
-class DetailsPage extends Component {
+class InfoPage extends Component {
 
-    componentDidMount() {
+  componentDidMount() {
 
-        this.props.dispatch({
-            type: 'FETCH_DATA',
-        });
-    }
+    this.props.dispatch({
+      type: 'FETCH_MISSION',
+    });
+  }
 
-    render() {
+  render() {
+   
+    const missionArray = this.props.store.missionReducer.map((item, index) => {
+      return (
+        <div key={index}>
+          <img src={item.mission_patch} alt="mission patch" width="150"></img>
 
-        const detailsArray = this.props.store.specMissionReducer.map((item, index) => {
-            return (
-                <div key={index}>
-          <img src={item.mission_patch} alt="mission patch" width="200"></img>
-
-          <div>
+          <div className="bigText">
           <h3>Mission Name:</h3> {item.mission_name}<br></br>
           <h5>Mission Objectives:</h5>
           <pre>
@@ -73,17 +73,17 @@ class DetailsPage extends Component {
           </pre>
           <br></br>
         </div>
-            )
-        })
+      )
+    })
 
-        return (
-            <div>
-                <h2>TEST INFO</h2>
-                <div>{detailsArray}</div>
-            </div>
-
-        )
-    }
+    return (
+      <div>
+        {/* <h2>MISSION INFO</h2> */}
+        <p>{JSON.stringify(this.props.store.missionReducer)}</p>
+        <div>{missionArray}</div>
+      </div>
+    )
+  }
 }
 
-export default connect(mapStoreToProps)(DetailsPage);
+export default connect(mapStoreToProps)(InfoPage);
