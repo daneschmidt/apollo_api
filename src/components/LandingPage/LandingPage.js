@@ -6,7 +6,7 @@ import './LandingPage.css';
 
 class LandingPage extends Component {
     state = {
-        heading: 'Class Component',
+        heading: 'SpaceCraftInfo API',
     };
 
     onLogin = (event) => {
@@ -21,7 +21,7 @@ class LandingPage extends Component {
                 <div className="grid">
                     <div className="grid-col grid-col_8">
                         <p>
-                            Welcome to Apollo API
+                            Welcome to SpaceCraftInfo API
                         </p>
 
                     </div>
