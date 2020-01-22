@@ -68,3 +68,6 @@ typings/
 
 # ignore package-lock as it complicates merging
 package-lock.json
+
+# ignore env file - using for heroku deploy
+.env
