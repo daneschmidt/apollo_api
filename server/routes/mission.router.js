@@ -6,7 +6,7 @@ const router = express.Router();
 router.get('/', (req, res) => {
 
     let queryText =
-        `SELECT * FROM "mission"
+        `SELECT "mission_name", "mission_objectives" FROM "mission"
     ORDER BY "mission_name" ASC;`;
 
     pool.query(queryText)
