@@ -60,4 +60,8 @@ const PORT = process.env.PORT || 5000;
 /** Listen * */
 app.listen(PORT, () => {
   console.log(`Listening on port: ${PORT}`);
+
+  ///BELOW IS TEST FOR API KEY IN ENV - - Remove later ///
+  console.log(process.env);
+ 
 });
