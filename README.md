@@ -1,4 +1,4 @@
-# Apollo API
+# SpaceCraftInfo.com API
 
 
 REST API for mission, launch, crew, orbit, lunar and landing data as well as crew and mission patch images
