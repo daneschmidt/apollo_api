@@ -1,0 +1,112 @@
+Date : 2020-01-24 16:21:07
+Directory : /Users/dane/prime/apollo_api
+Total : 59 files,  2030 codes, 229 comments, 449 blanks, all 2708 lines
+
+Languages
++------------+------------+------------+------------+------------+------------+
+| language   | files      | code       | comment    | blank      | total      |
++------------+------------+------------+------------+------------+------------+
+| JavaScript |         45 |      1,498 |        208 |        340 |      2,046 |
+| CSS        |          7 |        222 |         14 |         50 |        286 |
+| JSON       |          2 |        122 |          0 |          1 |        123 |
+| Markdown   |          2 |         84 |          0 |         43 |        127 |
+| SQL        |          1 |         78 |          7 |         12 |         97 |
+| HTML       |          2 |         26 |          0 |          3 |         29 |
++------------+------------+------------+------------+------------+------------+
+
+Directories
++----------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                             | files      | code       | comment    | blank      | total      |
++----------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                |         59 |      2,030 |        229 |        449 |      2,708 |
+| public                                                                           |          1 |         15 |          0 |          2 |         17 |
+| server                                                                           |         17 |        719 |         86 |        169 |        974 |
+| server/constants                                                                 |          1 |         21 |          0 |          3 |         24 |
+| server/modules                                                                   |          4 |         70 |         36 |         22 |        128 |
+| server/routes                                                                    |         10 |        549 |         26 |        123 |        698 |
+| server/strategies                                                                |          1 |         36 |         16 |          6 |         58 |
+| src                                                                              |         36 |      1,012 |        136 |        222 |      1,370 |
+| src/components                                                                   |         22 |        765 |         68 |        147 |        980 |
+| src/components/AboutPage                                                         |          1 |         14 |          4 |          5 |         23 |
+| src/components/App                                                               |          2 |        121 |          3 |         18 |        142 |
+| src/components/Footer                                                            |          2 |         11 |          4 |          5 |         20 |
+| src/components/InfoPage                                                          |          4 |        125 |          1 |         33 |        159 |
+| src/components/LandingPage                                                       |          2 |        123 |         11 |         30 |        164 |
+| src/components/LogOutButton                                                      |          1 |         11 |          7 |          3 |         21 |
+| src/components/LoginPage                                                         |          2 |        108 |          0 |         11 |        119 |
+| src/components/Nav                                                               |          2 |         66 |          3 |          8 |         77 |
+| src/components/ProtectedRoute                                                    |          1 |         35 |         22 |         11 |         68 |
+| src/components/RegisterPage                                                      |          1 |         85 |          0 |          8 |         93 |
+| src/components/TemplateClass                                                     |          1 |         16 |          4 |          4 |         24 |
+| src/components/TemplateFunction                                                  |          1 |         12 |          5 |          4 |         21 |
+| src/components/UserPage                                                          |          2 |         38 |          4 |          7 |         49 |
+| src/redux                                                                        |         13 |        223 |         60 |         67 |        350 |
+| src/redux/reducers                                                               |          6 |         87 |         16 |         18 |        121 |
+| src/redux/sagas                                                                  |          6 |        127 |         40 |         47 |        214 |
++----------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++----------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| filename                                                                         | language   | code       | comment    | blank      | total      |
++----------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| /Users/dane/prime/apollo_api/PostmanPrimeSoloRoutes.json                         | JSON       |         77 |          0 |          0 |         77 |
+| /Users/dane/prime/apollo_api/README.md                                           | Markdown   |          4 |          0 |          7 |         11 |
+| /Users/dane/prime/apollo_api/ReadMeBackup.md                                     | Markdown   |         80 |          0 |         36 |        116 |
+| /Users/dane/prime/apollo_api/database.sql                                        | SQL        |         78 |          7 |         12 |         97 |
+| /Users/dane/prime/apollo_api/package.json                                        | JSON       |         45 |          0 |          1 |         46 |
+| /Users/dane/prime/apollo_api/public/index.html                                   | HTML       |         15 |          0 |          2 |         17 |
+| /Users/dane/prime/apollo_api/server/constants/warnings.js                        | JavaScript |         21 |          0 |          3 |         24 |
+| /Users/dane/prime/apollo_api/server/modules/authentication-middleware.js         | JavaScript |          8 |          4 |          2 |         14 |
+| /Users/dane/prime/apollo_api/server/modules/encryption.js                        | JavaScript |         13 |         10 |          6 |         29 |
+| /Users/dane/prime/apollo_api/server/modules/pool.js                              | JavaScript |         31 |         11 |          8 |         50 |
+| /Users/dane/prime/apollo_api/server/modules/session-middleware.js                | JavaScript |         18 |         11 |          6 |         35 |
+| /Users/dane/prime/apollo_api/server/routes/crew.router.js                        | JavaScript |         54 |          0 |         10 |         64 |
+| /Users/dane/prime/apollo_api/server/routes/crewPic.router.js                     | JavaScript |         54 |          0 |         12 |         66 |
+| /Users/dane/prime/apollo_api/server/routes/highlights.router.js                  | JavaScript |         54 |          3 |         13 |         70 |
+| /Users/dane/prime/apollo_api/server/routes/landing.router.js                     | JavaScript |         54 |          3 |         11 |         68 |
+| /Users/dane/prime/apollo_api/server/routes/launch.router.js                      | JavaScript |         54 |          3 |         12 |         69 |
+| /Users/dane/prime/apollo_api/server/routes/lunar.router.js                       | JavaScript |         54 |          3 |         11 |         68 |
+| /Users/dane/prime/apollo_api/server/routes/mission.router.js                     | JavaScript |         77 |          0 |         14 |         91 |
+| /Users/dane/prime/apollo_api/server/routes/missionPatch.router.js                | JavaScript |         67 |          0 |         14 |         81 |
+| /Users/dane/prime/apollo_api/server/routes/orbit.router.js                       | JavaScript |         54 |          3 |         12 |         69 |
+| /Users/dane/prime/apollo_api/server/routes/user.router.js                        | JavaScript |         27 |         11 |         14 |         52 |
+| /Users/dane/prime/apollo_api/server/server.js                                    | JavaScript |         43 |          8 |         15 |         66 |
+| /Users/dane/prime/apollo_api/server/strategies/user.strategy.js                  | JavaScript |         36 |         16 |          6 |         58 |
+| /Users/dane/prime/apollo_api/src/components/AboutPage/AboutPage.js               | JavaScript |         14 |          4 |          5 |         23 |
+| /Users/dane/prime/apollo_api/src/components/App/App.css                          | CSS        |         42 |          1 |          7 |         50 |
+| /Users/dane/prime/apollo_api/src/components/App/App.js                           | JavaScript |         79 |          2 |         11 |         92 |
+| /Users/dane/prime/apollo_api/src/components/Footer/Footer.css                    | CSS        |          3 |          0 |          1 |          4 |
+| /Users/dane/prime/apollo_api/src/components/Footer/Footer.js                     | JavaScript |          8 |          4 |          4 |         16 |
+| /Users/dane/prime/apollo_api/src/components/InfoPage/InfoPage.css                | CSS        |         17 |          0 |          9 |         26 |
+| /Users/dane/prime/apollo_api/src/components/InfoPage/InfoPage.js                 | JavaScript |         18 |          1 |         12 |         31 |
+| /Users/dane/prime/apollo_api/src/components/InfoPage/InfoPageBackup.js           | JavaScript |         79 |          0 |         11 |         90 |
+| /Users/dane/prime/apollo_api/src/components/InfoPage/test.html                   | HTML       |         11 |          0 |          1 |         12 |
+| /Users/dane/prime/apollo_api/src/components/LandingPage/LandingPage.css          | CSS        |         87 |         11 |         22 |        120 |
+| /Users/dane/prime/apollo_api/src/components/LandingPage/LandingPage.js           | JavaScript |         36 |          0 |          8 |         44 |
+| /Users/dane/prime/apollo_api/src/components/LogOutButton/LogOutButton.js         | JavaScript |         11 |          7 |          3 |         21 |
+| /Users/dane/prime/apollo_api/src/components/LoginPage/LoginPage.css              | CSS        |         22 |          0 |          3 |         25 |
+| /Users/dane/prime/apollo_api/src/components/LoginPage/LoginPage.js               | JavaScript |         86 |          0 |          8 |         94 |
+| /Users/dane/prime/apollo_api/src/components/Nav/Nav.css                          | CSS        |         29 |          2 |          5 |         36 |
+| /Users/dane/prime/apollo_api/src/components/Nav/Nav.js                           | JavaScript |         37 |          1 |          3 |         41 |
+| /Users/dane/prime/apollo_api/src/components/ProtectedRoute/ProtectedRoute.js     | JavaScript |         35 |         22 |         11 |         68 |
+| /Users/dane/prime/apollo_api/src/components/RegisterPage/RegisterPage.js         | JavaScript |         85 |          0 |          8 |         93 |
+| /Users/dane/prime/apollo_api/src/components/TemplateClass/TemplateClass.js       | JavaScript |         16 |          4 |          4 |         24 |
+| /Users/dane/prime/apollo_api/src/components/TemplateFunction/TemplateFunction.js | JavaScript |         12 |          5 |          4 |         21 |
+| /Users/dane/prime/apollo_api/src/components/UserPage/UserPage.css                | CSS        |         22 |          0 |          3 |         25 |
+| /Users/dane/prime/apollo_api/src/components/UserPage/UserPage.js                 | JavaScript |         16 |          4 |          4 |         24 |
+| /Users/dane/prime/apollo_api/src/index.js                                        | JavaScript |         24 |          8 |          8 |         40 |
+| /Users/dane/prime/apollo_api/src/redux/mapStoreToProps.js                        | JavaScript |          9 |          4 |          2 |         15 |
+| /Users/dane/prime/apollo_api/src/redux/reducers/_root.reducer.js                 | JavaScript |         14 |          5 |          4 |         23 |
+| /Users/dane/prime/apollo_api/src/redux/reducers/errors.reducer.js                | JavaScript |         31 |          7 |          4 |         42 |
+| /Users/dane/prime/apollo_api/src/redux/reducers/loginMode.reducer.js             | JavaScript |         11 |          2 |          2 |         15 |
+| /Users/dane/prime/apollo_api/src/redux/reducers/mission.reducer.js               | JavaScript |         10 |          0 |          3 |         13 |
+| /Users/dane/prime/apollo_api/src/redux/reducers/specMission.reducer.js           | JavaScript |         10 |          0 |          3 |         13 |
+| /Users/dane/prime/apollo_api/src/redux/reducers/user.reducer.js                  | JavaScript |         11 |          2 |          2 |         15 |
+| /Users/dane/prime/apollo_api/src/redux/sagas/_root.saga.js                       | JavaScript |         15 |          6 |          5 |         26 |
+| /Users/dane/prime/apollo_api/src/redux/sagas/login.saga.js                       | JavaScript |         37 |         20 |         11 |         68 |
+| /Users/dane/prime/apollo_api/src/redux/sagas/mission.saga.js                     | JavaScript |         20 |          0 |          9 |         29 |
+| /Users/dane/prime/apollo_api/src/redux/sagas/registration.saga.js                | JavaScript |         17 |          6 |          7 |         30 |
+| /Users/dane/prime/apollo_api/src/redux/sagas/spec.mission.saga.js                | JavaScript |         20 |          0 |          9 |         29 |
+| /Users/dane/prime/apollo_api/src/redux/sagas/user.saga.js                        | JavaScript |         18 |          8 |          6 |         32 |
+| Total                                                                            |            |      2,030 |        229 |        449 |      2,708 |
++----------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
