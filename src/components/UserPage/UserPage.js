@@ -15,6 +15,8 @@ const UserPage = (props) => (
     </h1>
     <p>Your ID is: {props.store.user.id}</p>
     <p>Your API KEY is: {props.store.user.api_key}</p>
+    <p>Full Documentation in available at https://app.swaggerhub.com/apis-docs/daneschmidt/spacecraftinfo/2.0</p>
+    
     <LogOutButton className="log-in, btn" />
   </div>
 );

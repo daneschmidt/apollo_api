@@ -4,32 +4,6 @@ import mapStoreToProps from '../../redux/mapStoreToProps';
 
 import '../LoginPage/LoginPage.css'
 
-// MaterialUI
-
-import {
-  Button,
-  Grid,
-  Container
-} from '@material-ui/core';
-
-// Theme
-import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
-import { createMuiTheme } from '@material-ui/core/styles';
-import {
-  grey,
-  red,
-} from '@material-ui/core/colors';
-
-const theme = createMuiTheme({
-  palette: {
-    primary: grey,
-    secondary: grey,
-    error: red,
-    contrastThreshold: 3,
-    tonalOffset: 0.2,
-  }
-})
-
 class LoginPage extends Component {
   state = {
     username: '',
@@ -60,7 +34,6 @@ class LoginPage extends Component {
 
   render() {
     return (
-      <MuiThemeProvider theme={theme}>
       <div>
         {this.props.store.errors.loginMessage && (
           <h2
@@ -95,24 +68,24 @@ class LoginPage extends Component {
             </label>
           </div>
           <div>
-            <Button variant="contained" color="primary"
-            type="submit"
-            className="link-button, btn">
-             Log In
-            </Button>
+            <input
+              className="log-in, btn"
+              type="submit"
+              name="submit"
+              value="Log In"
+            />
           </div>
         </form>
         <center>
-          <Button variant="contained" color="primary"
+          <button
             type="button"
             className="link-button, btn"
             onClick={() => {this.props.dispatch({type: 'SET_TO_REGISTER_MODE'})}}
           >
             Register
-          </Button>
+          </button>
         </center>
       </div>
-      </MuiThemeProvider>
     );
   }
 }
