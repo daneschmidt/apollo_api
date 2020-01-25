@@ -19,6 +19,7 @@ import {
     grey,
     red,
 } from '@material-ui/core/colors';
+import Paper from '@material-ui/core/Paper';
 
 const theme = createMuiTheme({
     palette: {
@@ -27,12 +28,13 @@ const theme = createMuiTheme({
         error: red,
         contrastThreshold: 3,
         tonalOffset: 0.2,
+
     }
 })
 
 class LandingPage extends Component {
     state = {
-        heading: 'SpaceCraftInfo API',
+
     };
 
     onLogin = (event) => {
@@ -40,32 +42,40 @@ class LandingPage extends Component {
     }
 
     render() {
-        return (
-            <MuiThemeProvider theme={theme}>
-                <div className="container">
-                    <h2>{this.state.heading}</h2>
+        return ( <
+            MuiThemeProvider theme = { theme } >
+            <
+            Container >
+            <
+            h2 > { this.state.heading } < /h2>
 
-                    <div className="grid">
-                        <div className="grid-col grid-col_8">
-                            <p>
-                                Welcome to SpaceCraftInfo API
-                        </p>
+            <
+            Grid container direction = "column"
+            justify = "center"
+            alignItems = "center" >
+            <
+            Grid item xs = { 6 } >
+            <
+            h4 >
+            Welcome to SpaceCraftInfo API <
+            /h4>
 
-                        </div>
-                        <div className="grid-col grid-col_4">
-                            <h3>Already a Member?</h3>
-                            <Button variant="contained"
-                                color="primary"
-                                type="button"
-                                className="btn btn_sizeFull"
-                                onClick={this.onLogin}
-                            >
-                                Login
-                        </Button>
-                        </div>
-                    </div>
-                </div>
-            </MuiThemeProvider>
+            <
+            /Grid> <
+            Grid item xs = { 6 } >
+            <
+            h3 > Already a Member ? < /h3> <
+            Button variant = "contained"
+            color = "primary"
+            type = "button"
+            className = "btn btn_sizeFull"
+            onClick = { this.onLogin } >
+            Login <
+            /Button> < /
+            Grid > <
+            /Grid> < /
+            Container > <
+            /MuiThemeProvider>
         );
     }
 }
