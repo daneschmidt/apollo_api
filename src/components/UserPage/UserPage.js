@@ -31,37 +31,27 @@ const theme = createMuiTheme({
     }
 })
 
-// this could also be written with destructuring parameters as:
-// const UserPage = ({ user }) => (
-// and then instead of `props.user.username` you could use `user.username`
-const UserPage = (props) => ( <
-    MuiThemeProvider theme = { theme } >
-    <
-    div >
-    <
-    h1 id = "welcome" >
-    Welcome, { props.store.user.username }!
-    <
-    /h1> <
-    h3 > Your ID is: { props.store.user.id } < /h3> <
-    h3 > Your API KEY is: { props.store.user.api_key } < /h3> <
-    h3 > Full Documentation in available at < /h3>
-
-    {
-        /* <Button variant="contained" color="primary"
-                    type="button" className="log-in, btn" onClick="{location.href = 'https://app.swaggerhub.com/apis-docs/daneschmidt/spacecraftinfo/2.0';}">HERE</Button> */
-    }
-
-    <
-    Button variant = "contained"
-    color = "primary"
-    type = "button"
-    className = "log-in, btn"
-    onClick = {
-        () => props.dispatch({ type: 'LOGOUT' }) } > LOG OUT < /Button> <
-    /div> <
-    /MuiThemeProvider>
-);
-
+const UserPage = (props) => (
+    <MuiThemeProvider theme={theme} >
+    <div>
+        <center>
+        <h1 id="welcome" >
+            Welcome, {props.store.user.username}!
+    </h1> 
+    <h3 > Your ID is: {props.store.user.id} </h3> 
+    <h3 > Your API KEY is: {props.store.user.api_key} (dont share) </h3> 
+    <h3 > Full Documentation in available at </h3>
+    <Button variant="contained"
+            color="primary"
+            type="button"
+            className="log-in, btn"
+            onClick={
+                () => props.dispatch({ type: 'LOGOUT' })}> LOG OUT 
+    </Button> 
+    </center>
+    </div> 
+    </MuiThemeProvider>
+                        );
+                        
 // this allows us to use <App /> in index.js
 export default connect(mapStoreToProps)(UserPage);
