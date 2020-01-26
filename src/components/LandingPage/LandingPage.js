@@ -18,13 +18,13 @@ import { createMuiTheme } from '@material-ui/core/styles';
 import {
     grey,
     red,
-    teal,
+    lime,
 } from '@material-ui/core/colors';
 
 const theme = createMuiTheme({
     palette: {
         primary: grey,
-        secondary: teal,
+        secondary: lime,
         error: red,
         contrastThreshold: 3,
         tonalOffset: 0.2,
@@ -32,9 +32,7 @@ const theme = createMuiTheme({
 })
 
 class LandingPage extends Component {
-    state = {
-        heading: 'SpaceCraftInfo API',
-    };
+    state = {};
 
     onLogin = (event) => {
         this.props.history.push('/login');
@@ -56,14 +54,26 @@ class LandingPage extends Component {
                 <div className="container">
                     <center>
                         <h2>{this.state.heading}</h2>
-                        
                         <div className="grid">
                             <div className="grid-col grid-col_8">
-                                <h2>
-                                    Welcome
-                                </h2>
-                                <h4>SpaceCraftInfo is an open source REST API for spacecraft mission and crew data.</h4>
+                                <h1>
+                                    Welcome to SpaceCraftInfo API
+                                </h1>
+                                <h2>SpaceCraftInfo is an open source REST API <br />for spacecraft mission and crew data.</h2>
                             </div>
+                            <br />
+                            <div><Button variant="contained"
+                                color="secondary"
+                                type="button"
+                                className="log-in, btn"
+                                size="large"
+                                onClick={
+                                    () => window.open('https://safe-sea-74517.herokuapp.com/api/mission')}> VIEW SAMPLE DATA
+                                    
+                            </Button></div>
+                            <br />
+                            <br />
+                            <br />
                             <div>
                                 {/* <h5>Already a Member?</h5> */}
                                 <Button variant="contained"
@@ -72,7 +82,7 @@ class LandingPage extends Component {
                                     onClick={this.onLogin}
                                 >
                                     Enter
-                        </Button>
+                                </Button>
                             </div>
                         </div>
                     </center>

@@ -64,66 +64,68 @@ class LoginPage extends Component {
       <MuiThemeProvider theme={theme}>
         <br />
         <br />
-      <Container>
-        {this.props.store.errors.loginMessage && (
-          <h2
-            className="alert"
-            role="alert"
-          >
-            {this.props.store.errors.loginMessage}
-          </h2>
-        )}
-        <form onSubmit={this.login}>
-          <h1>Login</h1>
-          <div>
-            <center>
-            <label className="form_label" htmlFor="username">
-             Username:
+        <Container>
+          {this.props.store.errors.loginMessage && (
+            <h2
+              className="alert"
+              role="alert"
+            >
+              {this.props.store.errors.loginMessage}
+            </h2>
+          )}
+          <form onSubmit={this.login}>
+            <h1>Login</h1>
+            <div>
+              <center>
+                <label className="form_label" htmlFor="username">
+                  Username:
               <input
-                type="text"
-                name="username"
-                value={this.state.username}
-                onChange={this.handleInputChangeFor('username')}
-              />
-            </label>
-            </center>
-          </div>
-          <div>
-            <center>
-            <label className="form_label" htmlFor="password">
-              Password:
+                    type="text"
+                    name="username"
+                    value={this.state.username}
+                    onChange={this.handleInputChangeFor('username')}
+                  />
+                </label>
+              </center>
+            </div>
+            <div>
+              <center>
+                <label className="form_label" htmlFor="password">
+                  Password:
               <input
-                type="password"
-                name="password"
-                value={this.state.password}
-                onChange={this.handleInputChangeFor('password')}
-              />
-            </label>
-            </center>
-          </div>
-          <div>
-            <br />
-            <center>
-            <Button variant="contained" color="primary"
-            type="submit"
-            className="button-spacer">
-             Log In
+                    type="password"
+                    name="password"
+                    value={this.state.password}
+                    onChange={this.handleInputChangeFor('password')}
+                  />
+                </label>
+              </center>
+            </div>
+            <div>
+              <br />
+              <center>
+                <Button variant="contained" color="primary"
+                  type="submit"
+                  className="button-spacer">
+                  Log In
             </Button>
-            </center>
-          </div>
-        </form>
-        <center>
-          <br />
-          <br />
-          <Button variant="contained" color="primary"
-            type="button"
-            className="button-spacer"
-            onClick={() => {this.props.dispatch({type: 'SET_TO_REGISTER_MODE'})}}
-          >
-            Register
+              </center>
+            </div>
+          </form>
+          <center>
+            <br />
+            <br />
+            <br />
+            <br />
+            <Button variant="contained" color="primary"
+              type="button"
+              className="button-spacer"
+              onClick={() => { this.props.dispatch({ type: 'SET_TO_REGISTER_MODE' }) }}
+            >
+              Register
           </Button>
-        </center>
-      </Container>
+          </center>
+        </Container>
       </MuiThemeProvider>
     );
   }

@@ -48,17 +48,17 @@ const UserPage = (props) => (
                     Welcome, {props.store.user.username}!
                 </h2>
                 <h3> Your ID is: {props.store.user.id} </h3>
-                <h3> Your API KEY is: {props.store.user.api_key}</h3>
+                <h2> Your API KEY is: {props.store.user.api_key}</h2>
                 <h3>Your API KEY is private. Please do not share.</h3>
-                <h4> Full Documentation in available at</h4>
+                <h3> Full Documentation in available at</h3>
                 <div><Button variant="contained"
                     color="secondary"
                     type="button"
                     className="log-in, btn"
                     size="large"
                     onClick={
-                        () => window.location = 'https://app.swaggerhub.com/apis-docs/daneschmidt/spacecraftinfo/2.0'}> VIEW DOCUMENTATION
-    </Button></div>
+                        () => window.open('https://app.swaggerhub.com/apis-docs/daneschmidt/spacecraftinfo/2.0')}> VIEW DOCUMENTATION
+                </Button></div>
                 <br />
                 <br />
                 <br />

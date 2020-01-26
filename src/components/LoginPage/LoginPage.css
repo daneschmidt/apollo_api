@@ -55,5 +55,7 @@ h2 {
 
 .form_label {
     color: lightgrey;
+    font-family: 'VT323', monospace;
+    font-size: 20px;
 
 }
