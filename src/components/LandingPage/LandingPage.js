@@ -59,7 +59,8 @@ class LandingPage extends Component {
                                 <h1>
                                     Welcome to SpaceCraftInfo API
                                 </h1>
-                                <h2>SpaceCraftInfo is an open source REST API <br />for spacecraft mission and crew data.</h2>
+                                <h3>SpaceCraftInfo is an open source REST API <br />for spacecraft mission and crew data.</h3>
+                                <h3>The API is launching with NASA Apollo Data <br />but much more data from many other missions <br />will be added soon.</h3>
                             </div>
                             <br />
                             <div><Button variant="contained"

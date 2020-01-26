@@ -7,9 +7,10 @@ Full Documentation in available at https://app.swaggerhub.com/apis-docs/daneschm
 
 # Screenshots
 
+![](/public/images/scinfoscreeny.png)
 ![](/public/images/sampledata.png)
 ![](/public/images/sampledoc.png)
-![](/public/images/scinfoscreeny.png)
+
 
 # Usage
 
