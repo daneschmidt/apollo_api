@@ -1,24 +1,29 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0px;
+    background-image: url(../LandingPage/images/screenbgtransparent.png);
+    background-position:center top;
+
 }
 
 .alert {
-    background-color: #ff4545;
+    background-color: #f8890a;
     margin: 50px;
 }
 
 form {
-    background-color: #dbd5d5;
+    /* background-color: #808080; */
     width: 30%;
-    height: 250px;
-    margin: 20px auto;
-    padding: 25px;
-    border-radius: 2px;
+    height: 150px;
+    margin: 80px auto;
+    padding: 15px;
+    border-radius: 20px;
+    padding-top: 4cm;
+   
 }
 
 input {
-    margin: 5px;
+    margin: 15px;
     margin-bottom: 10px;
 }
 

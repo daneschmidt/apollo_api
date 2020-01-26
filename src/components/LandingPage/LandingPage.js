@@ -18,20 +18,17 @@ import { createMuiTheme } from '@material-ui/core/styles';
 import {
     grey,
     red,
+    teal,
 } from '@material-ui/core/colors';
 
 const theme = createMuiTheme({
     palette: {
         primary: grey,
-        secondary: grey,
+        secondary: teal,
         error: red,
         contrastThreshold: 3,
         tonalOffset: 0.2,
     },
-    body: {
-        backgroundImage: 'url(https://source.unsplash.com/random)',
-    },
-  
 })
 
 class LandingPage extends Component {
@@ -46,19 +43,29 @@ class LandingPage extends Component {
     render() {
         return (
             <MuiThemeProvider theme={theme}>
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
                 <div className="container">
                     <center>
                         <h2>{this.state.heading}</h2>
-
+                        
                         <div className="grid">
                             <div className="grid-col grid-col_8">
                                 <h2>
                                     Welcome
                                 </h2>
-
+                                <h4>SpaceCraftInfo is an open source REST API for spacecraft mission and crew data.</h4>
                             </div>
                             <div>
-                                <h3>Already a Member?</h3>
+                                <h5>Already a Member?</h5>
                                 <Button variant="contained"
                                     color="primary"
                                     type="button"

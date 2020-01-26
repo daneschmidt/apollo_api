@@ -5,7 +5,7 @@ import './Footer.css'
 
 const Footer = () => (
   <footer>
-    &copy; Dane Schmidt - Software Engineer - 2020
+    <h5>&copy; Dane Schmidt - Software Engineer - 2020</h5>
   </footer>
 );
 

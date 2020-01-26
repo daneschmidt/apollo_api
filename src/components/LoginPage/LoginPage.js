@@ -17,13 +17,14 @@ import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
 import { createMuiTheme } from '@material-ui/core/styles';
 import {
   grey,
+  lime,
   red,
 } from '@material-ui/core/colors';
 
 const theme = createMuiTheme({
   palette: {
     primary: grey,
-    secondary: grey,
+    secondary: lime,
     error: red,
     contrastThreshold: 3,
     tonalOffset: 0.2,
@@ -61,7 +62,9 @@ class LoginPage extends Component {
   render() {
     return (
       <MuiThemeProvider theme={theme}>
-      <div>
+        <br />
+        <br />
+      <Container>
         {this.props.store.errors.loginMessage && (
           <h2
             className="alert"
@@ -73,8 +76,9 @@ class LoginPage extends Component {
         <form onSubmit={this.login}>
           <h1>Login</h1>
           <div>
-            <label htmlFor="username">
-              Username:
+            <center>
+            <label className="form_label" htmlFor="username">
+             Username:
               <input
                 type="text"
                 name="username"
@@ -82,9 +86,11 @@ class LoginPage extends Component {
                 onChange={this.handleInputChangeFor('username')}
               />
             </label>
+            </center>
           </div>
           <div>
-            <label htmlFor="password">
+            <center>
+            <label className="form_label" htmlFor="password">
               Password:
               <input
                 type="password"
@@ -93,25 +99,31 @@ class LoginPage extends Component {
                 onChange={this.handleInputChangeFor('password')}
               />
             </label>
+            </center>
           </div>
           <div>
+            <br />
+            <center>
             <Button variant="contained" color="primary"
             type="submit"
-            className="link-button, btn">
+            className="button-spacer">
              Log In
             </Button>
+            </center>
           </div>
         </form>
         <center>
+          <br />
+          <br />
           <Button variant="contained" color="primary"
             type="button"
-            className="link-button, btn"
+            className="button-spacer"
             onClick={() => {this.props.dispatch({type: 'SET_TO_REGISTER_MODE'})}}
           >
             Register
           </Button>
         </center>
-      </div>
+      </Container>
       </MuiThemeProvider>
     );
   }
