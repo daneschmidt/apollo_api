@@ -3,27 +3,30 @@
 
 REST API for mission, launch, crew, orbit, lunar and landing data as well as crew and mission patch images
 
-Full Documentation in available at https://app.swaggerhub.com/apis-docs/daneschmidt/spacecraftinfo/2.0
 
 # Screenshots
 
 ![](/public/images/scinfoscreeny.png)
-![](/public/images/sampledata.png)
-![](/public/images/sampledoc.png)
 
 
 # Usage
 
-See documentation link above for usage examples
+Full Documentation in available at https://app.swaggerhub.com/apis-docs/daneschmidt/spacecraftinfo/2.0
+![](/public/images/sampledoc.png)
+
+Visit https://safe-sea-74517.herokuapp.com/api/mission for an example response. 
+![](/public/images/sampledata.png)
+
 
 # Duration
 
-This project was initially constructed as a two week sprint project for my solo project at Prime Digital Academy
+This project was constructed as a two week sprint project for my solo project at Prime Digital Academy
 
 
 # Technologies Used
 
-React, Redux, Epxress, Passport, PostgreSQL, Javascript, HTML 5, CSS, Postman for testing and Swagger for documentation.
+React, Redux, Express, Node, Passport, PostgreSQL, Javascript, Material UI, HTML 5, CSS, Postman for testing and Swagger for documentation.
+
 
 # Contact
 
