@@ -65,13 +65,13 @@ class LandingPage extends Component {
                                 <h4>SpaceCraftInfo is an open source REST API for spacecraft mission and crew data.</h4>
                             </div>
                             <div>
-                                <h5>Already a Member?</h5>
+                                {/* <h5>Already a Member?</h5> */}
                                 <Button variant="contained"
                                     color="primary"
                                     type="button"
                                     onClick={this.onLogin}
                                 >
-                                    Login
+                                    Enter
                         </Button>
                             </div>
                         </div>
