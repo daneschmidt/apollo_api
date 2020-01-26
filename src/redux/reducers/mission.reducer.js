@@ -8,6 +8,4 @@ const missionReducer = (state = [], action) => {
     }
 }
 
-console.log(missionReducer);
-
 export default missionReducer;

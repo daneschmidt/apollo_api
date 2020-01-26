@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import LogOutButton from '../LogOutButton/LogOutButton';
+// import LogOutButton from '../LogOutButton/LogOutButton';
 import mapStoreToProps from '../../redux/mapStoreToProps';
 
 import '../UserPage/UserPage.css';
@@ -9,12 +9,12 @@ import '../UserPage/UserPage.css';
 
 import {
     Button,
-    Grid,
-    Container
+    // Grid,
+    // Container
 } from '@material-ui/core';
 
 // Theme
-import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
+import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
 import { createMuiTheme } from '@material-ui/core/styles';
 import {
     grey,

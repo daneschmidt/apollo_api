@@ -6,7 +6,7 @@ import mapStoreToProps from '../../redux/mapStoreToProps';
 
 import {
   Button,
-  Grid,
+  // Grid,
   Container
 } from '@material-ui/core';
 
@@ -101,7 +101,6 @@ class RegisterPage extends Component {
             <br />
             <center>
             <Button variant="contained" color="primary"
-            type="button"
             className="register"
             type="submit"
             name="submit"

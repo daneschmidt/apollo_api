@@ -8,6 +8,4 @@ const specMissionReducer = (state = [], action) => {
     }
 }
 
-console.log(specMissionReducer);
-
 export default specMissionReducer;
