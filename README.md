@@ -14,6 +14,9 @@ REST API for mission, launch, crew, orbit, lunar and landing data as well as cre
 Full Documentation in available at https://app.swaggerhub.com/apis-docs/daneschmidt/spacecraftinfo/2.0
 ![](/public/images/sampledoc.png)
 
+
+# Example Response
+
 Visit https://safe-sea-74517.herokuapp.com/api/mission for an example response. 
 ![](/public/images/sampledata.png)
 
