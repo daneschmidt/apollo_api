@@ -49,8 +49,6 @@ class LandingPage extends Component {
                 <br />
                 <br />
                 <br />
-                <br />
-                <br />
                 <div className="container">
                     <center>
                         <h2>{this.state.heading}</h2>

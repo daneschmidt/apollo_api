@@ -60,6 +60,7 @@ class RegisterPage extends Component {
     return (
       <MuiThemeProvider theme={theme}>
         <Container>
+          <br />
       <div>
         {this.props.errors.registrationMessage && (
           <h2

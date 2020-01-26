@@ -63,7 +63,6 @@ class LoginPage extends Component {
     return (
       <MuiThemeProvider theme={theme}>
         <br />
-        <br />
         <Container>
           {this.props.store.errors.loginMessage && (
             <h2

@@ -43,6 +43,8 @@ const UserPage = (props) => (
             <br />
             <br />
             <br />
+            <br />
+            <br />
             <center>
                 <h2 id="welcome" >
                     Welcome, {props.store.user.username}!
