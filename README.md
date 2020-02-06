@@ -21,7 +21,12 @@ For API interactions please see https://app.swaggerhub.com/apis-docs/daneschmidt
 
 # Project Setup
 
+Fork and clone the repo from Github.
+NPM install to install all dependencies. 
 The database.sql file can be referenced for database creation locally if you want to pull the project down to your machine. 
+npm run server
+npm run client
+app will come up on localhost:3000 in the browser
 
 
 # Duration
