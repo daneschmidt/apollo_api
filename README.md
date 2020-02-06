@@ -6,23 +6,22 @@ REST API for mission, launch, crew, orbit, lunar and landing data as well as cre
 
 # Screenshots
 
-![](/public/images/scinfoscreeny.png)
+![](/public/images/loginScreeny.png)
 
 
 # Usage
 
-Full Documentation in available at https://app.swaggerhub.com/apis-docs/daneschmidt/spacecraftinfo/2.0
+Register a username and password on the site, once registered you will be presented with your API key.
+
+For API interactions please see https://app.swaggerhub.com/apis-docs/daneschmidt/spacecraftinfo/2.0
 
 
 ![](/public/images/sampledoc.png)
 
 
-# Example Response
+# Project Setup
 
-Visit https://safe-sea-74517.herokuapp.com/api/mission for an example response. 
-
-
-![](/public/images/sampledata.png)
+The database.sql file can be referenced for database creation locally if you want to pull the project down to your machine. 
 
 
 # Duration
